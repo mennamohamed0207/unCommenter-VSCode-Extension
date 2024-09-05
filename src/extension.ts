@@ -18,12 +18,25 @@ export function activate(context: vscode.ExtensionContext) {
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Hello World from unCommenter!');
 	});
-	const getCode = vscode.commands.registerCommand('uncommenter.comment', () => {
+	const commentSelected = vscode.commands.registerCommand('uncommenter.comment', () => {
 		vscode.commands.executeCommand('editor.action.addCommentLine');
-	}) 
+	})
+	const uncommentSelected = vscode.commands.registerCommand('uncommenter.uncomment', () => {
+		vscode.commands.executeCommand('editor.action.removeCommentLine');
+		const activeEditor = vscode.window.activeTextEditor;
+
+		if (activeEditor) {
+			vscode.commands.executeCommand('editor.action.addCommentLine');
+			let text: string =activeEditor.document.getText();
+			
+		}
+	})
+
 
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(commentSelected);
+	context.subscriptions.push(uncommentSelected);
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }

@@ -20,6 +20,10 @@
       {
         "command":"uncommenter.comment",
         "title":"Comment"
+      },
+      {
+        "command":"uncommenter.uncomment",
+        "title":"Uncomment"
       }
     ]
   },
