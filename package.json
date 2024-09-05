@@ -16,6 +16,10 @@
       {
         "command": "uncommenter.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command":"uncommenter.comment",
+        "title":"Comment"
       }
     ]
   },

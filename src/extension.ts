@@ -18,6 +18,9 @@ export function activate(context: vscode.ExtensionContext) {
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Hello World from unCommenter!');
 	});
+	const getCode = vscode.commands.registerCommand('uncommenter.comment', () => {
+		vscode.commands.executeCommand('editor.action.addCommentLine');
+	}) 
 
 	context.subscriptions.push(disposable);
 }
