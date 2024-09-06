@@ -3,7 +3,7 @@ unCommenter is a VSCode extension designed to streamline the process of removing
 
 # How to use it 
 - Go to the file that you want to remove comments from
-- press on command pattle or press ctrl+p
+- press on Command Palette  or press ctrl+p
 - type '>Uncommenter'
 - you will have option 'Uncommenter' when you choose it, your comments will be removed
 ## Features
