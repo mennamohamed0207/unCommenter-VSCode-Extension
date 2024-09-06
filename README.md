@@ -1,5 +1,11 @@
 # uncommenter README
 unCommenter is a VSCode extension designed to streamline the process of removing comments from C++ files. Whether you're working with single-line (//) or multi-line (/* */) comments, unCommenter efficiently cleans up your code, making it easier to read and debug.
+
+# How to use it 
+- Go to the file that you want to remove comments from
+- press on command pattle or press ctrl+p
+- type '>Uncommenter'
+- you will have option 'Uncommenter' when you choose it, your comments will be removed
 ## Features
 
 - Automatically removes both single-line and multi-line comments from C++ files.
