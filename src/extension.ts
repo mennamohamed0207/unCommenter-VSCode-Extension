@@ -22,21 +22,18 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.executeCommand('editor.action.addCommentLine');
 	})
 	const uncommentSelected = vscode.commands.registerCommand('uncommenter.uncomment', () => {
-		// vscode.commands.executeCommand('editor.action.removeCommentLine');
 		const activeEditor = vscode.window.activeTextEditor;
-		
+
 		if (activeEditor) {
 			const document = activeEditor.document;
 			const fullRange = new vscode.Range(
 				document.positionAt(0),  // Start of the document
 				document.positionAt(document.getText().length)  // End of the document
 			);
-			// vscode.commands.executeCommand('editor.action.removeCommentLine');
-			let text: string =activeEditor.document.getText();
+			let text: string = activeEditor.document.getText();
 			let newText = text.replace(/\/\/.*|\/\*[\s\S]*?\*\//g, '');
 			activeEditor.edit((editBuilder) => {
 				editBuilder.replace(fullRange, newText);
-				vscode.window.showInformationMessage(newText);
 			});
 		}
 	})
